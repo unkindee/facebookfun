@@ -1,0 +1,320 @@
+.imgm {
+
+  &-like,
+  &-comment,
+  &-share {
+    margin-right: 17px;
+  }
+
+  &-like {
+    width: 33px;
+    height: 34px;
+    background-position: -10px -192px;
+  }
+
+  &-comment {
+    width: 28px;
+    height: 30px;
+    background-position: -63px -192px;
+  }
+
+  &-share {
+    width: 32px;
+    height: 26px;
+    background-position: -111px -192px;
+  }
+
+  &-graterthan {
+    width: 17px;
+    height: 23px;
+    background-position: -255px -57px;
+  }
+}
+
+article,
+.photos,
+.reviews,
+.visitor-posts,
+.wrapper,
+.url,
+.tabs,
+.ratings,
+.contact-us,
+.logo-title {
+  padding: 13px;
+}
+
+.reviews,
+.photos,
+.address {
+  a {
+    font-size: 28px;
+    color: #9197a3;
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
+    margin-top: 20px;
+    margin-bottom: 7px;
+  }
+
+  span {
+    padding-right: 14px;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.logo-title {
+    @include flexbox();
+    img {
+        height: 128;
+        width: 128px;
+    }
+}
+
+.contact-us {
+  button {
+    width: 100%;
+    background: $stars;
+    color: $white;
+    border-radius: 2px;
+    padding: 5px 0;
+    @include justify-content(center);
+  }
+}
+
+.ratings {
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  .shapes {
+    @include flexbox();
+    @include align-items(center);
+  }
+}
+
+.tabs {
+  ul {
+    @include flexbox();
+    @include justify-content(space-around);
+    padding: 5px;
+  }
+}
+
+.reviewers {
+  @include flexbox();
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .wrapper {
+    @include flexbox();
+    @include flex-direction(column);
+  }
+
+}
+
+.reviews {
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  .rating__stars,
+  .shapes {
+    @include flexbox();
+  }
+}
+
+.url {}
+
+.address {
+  .wrapper {
+    @include flexbox();
+    @include justify-content(space-between);
+    border-bottom: 1px solid $border;
+  }
+
+  .location {
+    @include flexbox();
+    @include align-items(center);
+  }
+}
+
+.visitor-posts {
+  .wrapper {
+    @include flexbox();
+    @include justify-content(space-around);
+    border-top: 1px solid $border;
+
+    div {
+      padding: 50px;
+      flex: 0 0 50%;
+      text-align: center;
+
+      &:first-child {
+        border-right: 1px solid $border;
+      }
+    }
+
+    a {
+      color: #9399a4;
+    }
+  }
+
+}
+
+.reviews {
+  .visuals {
+    padding-right: 10px;
+  }
+
+  .reviewers {
+    @include flexbox;
+    padding-top: 15px;
+
+    a {
+      margin: 0;
+    }
+
+    img {
+      width: 56px;
+      height: 56px;
+    }
+
+    .content {
+      @include flexbox;
+      @include flex-direction(column);
+      width: 100%;
+    }
+
+    .stars {
+      @include avrating();
+      background-color: $white;
+      color: #5890ff;
+      padding: 0;
+      font-size: 12px;
+    }
+
+    .date {
+      @include flexbox;
+      @include align-items(center);
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.photos {
+  .images {
+    @include flexbox();
+    @include justify-content(center);
+
+    .img {
+      max-width: 330px;
+      height: 100%;
+
+      &:nth-of-type(2) {
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
+.button-wrapper,
+button {
+  @include flexbox;
+
+  span:last-child {
+    font-weight: bold;
+    color: #7f7f7f;
+    font-size: 21px;
+  }
+}
+
+article {
+  border: 1px solid $border;
+  background: $white;
+
+  .article-header,
+  .info-wrapper {
+    @include flexbox;
+    @include align-items(center);
+
+    &__logo {
+      margin-right: 10px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &__info a {
+      color: #141823;
+      font-size: 14px;
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  h2 {
+    color: $black;
+    line-height: 1.5;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  P {
+    font-size: 12px;
+  }
+
+  .short-description {
+    color: $black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+  }
+
+  .info-wrapper {
+    color: #90949c;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    @include justify-content(space-around);
+    margin: 0 auto;
+  }
+
+  .article-preview {
+    border: 1px solid $border;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+
+    .article-wrapper {
+      padding: 0 10px;
+    }
+
+    a {
+      color: $black;
+    }
+
+    span {
+      display: block;
+    }
+
+    &__url {
+      text-transform: uppercase;
+      color: #93949f;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+  }
+}

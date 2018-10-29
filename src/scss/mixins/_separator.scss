@@ -1,0 +1,10 @@
+@mixin separator($content, $height, $right, $position, $top, $width, $background) {
+    content: $content;
+    display: block;
+    height: $height;
+    right: $right;
+    position: $position;
+    top: $top;
+    width: $width;
+    background: $background;
+}

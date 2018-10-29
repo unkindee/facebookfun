@@ -1,0 +1,466 @@
+.sidebar {
+    max-width: 314px;
+    width: 100%;
+    padding: 0;
+
+    .margin:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+    .search,
+    .rating,
+    .social-sharing,
+    .location,
+    .opinions,
+    .photos,
+    .reviews,
+    .liked {
+      border: 1px solid $border;
+      background: $white;
+      border-radius: 2px;
+    }
+
+    .rating,
+    .location__title,
+    .location__details,
+    .opinions__share,
+    .opinions__review,
+    .photos h2,
+    .reviews h2,
+    .liked h2,
+    .location h2,
+    .reviews-ratings,
+    .reviewers,
+    .liked-element {
+      padding: 9px 8px 9px 10px;
+    }
+
+    .reviews-ratings,
+    .carousel-container,
+    .opinions__review,
+    .location__map {
+      border-top: 1px solid $border;
+    }
+
+    .liked h2 {
+      border-bottom: 1px solid $border;
+    }
+
+    .rating {
+
+      &__title {
+        font-size: 14px;
+        color: $rating;
+        font-weight: bold;
+        margin: 5px 0;
+      }
+
+      &__stars {
+        @include flexbox;
+        @include align-items(center);
+      }
+
+      .value {
+        font-size: 16px;
+        color: $stars;
+        margin-right: 5px;
+      }
+    }
+
+    .search-form {
+      position: relative;
+
+      button {
+        position: absolute;
+        top: calc(50% - 7px);
+        left: 10px;
+      }
+
+      .img {
+        &-magnifier {
+          width: 14px;
+          height: 14px;
+          background-position: -10px -147px;
+        }
+      }
+
+      &__input {
+        padding: 9px 9px 9px 40px;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+    .social-sharing {
+      .wrapper {
+        @include flexbox;
+        position: relative;
+        padding: 0 8px 9px 10px;
+
+        &:first-child {
+          padding-top: 9px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:after {
+          @include separator('', 1px, 0, absolute, -6px, 100%, $border);
+        }
+
+        &:first-child:after {
+          display: none;
+        }
+
+        div:first-child {
+          width: 36px;
+          height: 36px;
+          @include flexbox;
+          @include justify-content(center);
+          @include align-items(center);
+        }
+
+        .img {
+          &-addfriend {
+            width: 19px;
+            height: 16px;
+            background-position: -10px -111px;
+          }
+        }
+
+        .info {
+          @include flexbox;
+          @include flex-direction(column);
+          @include justify-content(center);
+          margin-left: 10px;
+          font-size: 12px;
+
+          &__number {
+            color: $darkGray;
+            font-weight: bold;
+          }
+
+          &__friends {
+            color: #91949c;
+          }
+        }
+      }
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+
+      .average-rating {
+        @include avrating();
+      }
+    }
+
+    .location {
+      background: $gray;
+
+      .img {
+        &-arrow {
+          width: 12px;
+          height: 12px;
+          background-position: -191px -43px;
+        }
+
+        &-phone {
+          width: 11px;
+          height: 11px;
+          background-position: -191px -107px;
+        }
+
+        &-question {
+          width: 16px;
+          height: 16px;
+          background-position: -155px -10px;
+        }
+
+        &-url {
+          width: 12px;
+          height: 12px;
+          background-position: -191px -75px;
+        }
+      }
+
+      &__map {
+        height: 100px;
+      }
+
+      &__details {
+
+        p,
+        a {
+          font-size: 12px;
+          font-weight: bold;
+        }
+
+        .address,
+        .phone,
+        .questions,
+        .url {
+          @include flexbox;
+          @include align-items(center);
+          padding: 9px 0;
+
+          div {
+            margin-right: 11px;
+            flex: 0 0 6%;
+          }
+        }
+
+        .address {
+          p {
+            color: $blue;
+          }
+        }
+
+        .phone {
+          p {
+            color: $darkGray;
+          }
+        }
+
+        .questions {
+          a {
+            color: $stars;
+            text-decoration: underline;
+          }
+        }
+
+        .url {
+          margin-bottom: 5px;
+
+          a {
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    .opinions {
+
+      .rated,
+      a {
+        font-size: 12px;
+      }
+
+      &__share {
+        h2 {
+          font-size: 16px;
+          color: $rating;
+          font-weight: 100;
+          margin-bottom: 14px;
+
+          span {
+            font-weight: bold;
+          }
+        }
+
+        .rated {
+          color: #91949c;
+        }
+
+        .star-wrapper {
+          @include flexbox;
+          @include align-items(center);
+          padding: 4px 0;
+        }
+
+        .average-rating {
+          @include avrating();
+        }
+      }
+
+      .average-rating,
+      img {
+        margin-right: 8px;
+      }
+
+      &__review {
+        @include flexbox;
+        @include align-items(center);
+
+        img {
+          height: 32px;
+          width: 32px;
+        }
+
+        a {
+          color: $blue;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .photos,
+    .reviews,
+    .liked,
+    .location {
+      background: $white;
+
+      h2 {
+        font-size: 11px;
+        color: $darkGray;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: $gray;
+      }
+    }
+
+    .photos {
+      .carousel-container {
+        @include flexbox;
+        @include justify-content(center);
+      }
+
+      .carousel {
+        display: grid;
+        grid-template-columns: 99px 99px 99px;
+        grid-gap: 3px;
+        margin: 4px 0;
+      }
+
+      img {
+        border: 1px solid $border;
+      }
+    }
+
+    .reviews {
+      .average-rating {
+        @include avrating();
+        font-size: 14px;
+        padding: 3px 11px;
+
+        &:after {
+          font-size: 13px;
+        }
+      }
+
+      .no-of-stars,
+      .no-of-reviews,
+      .name,
+      .stars,
+      .date {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .no-of-reviews,
+      .date {
+        color: #969aa5;
+      }
+
+      .reviews-ratings {
+        @include flexbox;
+        @include align-items(center);
+        position: relative;
+
+        .no-of {
+
+          &-stars {
+            color: $rating;
+          }
+        }
+      }
+
+      .visuals {
+        flex: 0 0 20%;
+        padding-right: 10px;
+      }
+
+      .reviewers {
+        @include flexbox;
+        position: relative;
+        border-top: 1px solid $border;
+        padding-top: 15px;
+
+        .img-collapse {
+          position: absolute;
+          right: 15px;
+          width: 10px;
+          height: 7px;
+          background-position: -10px -181px;
+          cursor: pointer;
+        }
+
+        img {
+          width: 56px;
+          height: 56px;
+        }
+
+        .name a {
+          color: $buttonBlue;
+        }
+
+        .content {
+          @include flexbox;
+          @include flex-direction(column);
+          width: 100%;
+        }
+
+        .stars {
+          @include avrating();
+          background-color: $white;
+          color: #5890ff;
+          padding: 0;
+          font-size: 12px;
+        }
+
+        .date {
+          @include flexbox;
+          @include align-items(center);
+          padding-bottom: 15px;
+          border-bottom: 1px solid $border;
+        }
+
+        .button-wrapper {
+          margin: 8px 0 15px 0;
+        }
+
+        button:first-child {
+          margin-right: 14px;
+        }
+      }
+    }
+
+    .liked {
+      .liked-element {
+        @include flexbox;
+        @include justify-content(space-between);
+        @include align-items(center);
+        border-bottom: 1px solid $border;
+        margin: 5px 0;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      button {
+        background: $gray;
+        border: 1px solid #ced0d4;
+        padding: 3px 6px;
+        border-radius: 2px;
+        margin-right: 17px;
+      }
+
+      .name {
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      img {
+        width: 52px;
+        height: 52px;
+        margin-right: 10px;
+      }
+
+      .details {
+        @include flexbox;
+        @include align-items(center);
+      }
+    }
+  }

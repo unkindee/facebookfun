@@ -1,0 +1,52 @@
+.imgm {
+  &-home {
+    width: 42px;
+    height: 39px;
+    background-position: -146px -10px;
+  }
+
+  &-add {
+    width: 49px;
+    height: 42px;
+    background-position: -10px -10px;
+  }
+
+  &-chat {
+    width: 42px;
+    height: 42px;
+    background-position: -10px -72px;
+  }
+
+  &-world {
+    width: 42px;
+    height: 42px;
+    background-position: -72px -72px;
+  }
+
+  &-more {
+    width: 42px;
+    height: 33px;
+    background-position: -67px -134px;
+  }
+
+  &-arrow {
+    width: 26px;
+    height: 34px;
+    background-position: -208px -72px;
+  }
+}
+
+.m-container {
+  max-width: 767px;
+  width: 100%;
+  margin: 0 auto;
+  background: $white;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  @include flexbox();
+  @include justify-content(space-around);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

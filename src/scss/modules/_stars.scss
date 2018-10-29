@@ -1,0 +1,53 @@
+//@import url(//use.fontawesome.com/releases/v5.3.1/css/all.css);
+
+fieldset,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+.stars {
+  border: none;
+  float: left;
+}
+
+.stars>input {
+  display: none;
+}
+
+.stars>label:before {
+  margin: 5px 2px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.stars>.half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.stars>label {
+  color: #ddd;
+  float: right;
+}
+
+.stars>input:checked~label,
+/* show blue star when clicked */
+.stars:not(:checked)>label:hover,
+/* hover current star */
+.stars:not(:checked)>label:hover~label {
+  color: $stars;
+}
+
+/* hover previous stars in list */
+
+.stars>input:checked+label:hover,
+/* hover current star when changing stars */
+.stars>input:checked~label:hover,
+.stars>label:hover~input:checked~label,
+/* lighten current selection */
+.stars>input:checked~label:hover~label {
+  color: $stars;
+}

@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  color: #444;
+  transition: all .4s .3s ease-in;
+  background-color: $bgColor;
+}
+
+input,
+textarea {
+  border-style: none;
+}
+
+textarea {
+  resize: none
+}
+
+button {
+  border-style: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  @include align-items(center);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: $pageContainerWidth;
+  margin: 0 auto;
+  @include flexbox;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+
+  &-facebook,
+  &-magnifier,
+  &-friends,
+  &-messages,
+  &-globe,
+  &-lock,
+  &-v,
+  &-tick,
+  &-liked,
+  &-message,
+  &-dots,
+  &-vlight,
+  &-post,
+  &-photo,
+  &-varrow,
+  &-globesmall,
+  &-like,
+  &-comment,
+  &-share,
+  &-smiley,
+  &-camera,
+  &-likedblue,
+  &-addfriend,
+  &-arrow,
+  &-phone,
+  &-question,
+  &-url,
+  &-collapse {
+    background: url('../img/css_sprites.png');
+    display: block;
+  }
+}
+
+.imgm {
+
+  &-home,
+  &-add,
+  &-chat,
+  &-world,
+  &-more,
+  &-like,
+  &-comment,
+  &-share,
+  &-graterthan,
+  &-arrow
+    {
+    background: url('../img/css_sprites_mob.png');
+    display: block;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.divider {
+  height: 1px;
+  background-color: $border;
+  width: 100%;
+  margin: 10px 0;
+}
